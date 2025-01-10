@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.doric7.screens.contractsScreen.ContractsScreenController">
+    <top>
+        <MenuBar>
+            <Menu text="Category">
+                <MenuItem text="Search" onAction="#onCategoryMenuClick"/>
+            </Menu>
+            <Menu text="Ingredients">
+                <MenuItem text="Search" onAction="#onIngredientsMenuClick"/>
+            </Menu>
+            <Menu text="Meals">
+                <MenuItem text="Search" onAction="#onMealsMenuClick"/>
+            </Menu>
+            <Menu text="Chefs">
+                <MenuItem text="Search" onAction="#onChefMenuClick"/>
+            </Menu>
+            <Menu text="Waiters">
+                <MenuItem text="Search" onAction="#onWaitersMenuClick"/>
+            </Menu>
+            <Menu text="Deliverers">
+                <MenuItem text="Search" onAction="#onDeliverersMenuClick"/>
+            </Menu>
+            <Menu text="Restaurants">
+                <MenuItem text="Search" onAction="#onRestaurantsMenuClick"/>
+            </Menu>
+            <Menu text="Orders">
+                <MenuItem text="Search" onAction="#onOrdersMenuClick"/>
+            </Menu>
+            <Menu text="Contracts">
+                <MenuItem text="Search" onAction="#onContractsMenuClick"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <!-- Center Content -->
+    <center>
+        <VBox alignment="CENTER" spacing="20.0">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </padding>
+
+            <Label fx:id="welcomeText"/>
+            <Button text="Contracts!" onAction="#onHelloButtonClick"/>
+        </VBox>
+    </center>
+</BorderPane>
