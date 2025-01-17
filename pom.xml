@@ -133,7 +133,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.doric7/com.example.doric7.screens.firstScreen.FirstScreen</mainClass>
+                            <mainClass>com.example.doric7/com.example.doric7.app.FirstScreen</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>

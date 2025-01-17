@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.MenuItem?>
-<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.doric7.screens.firstScreen.FirstScreenController">
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.doric7.controllers.FirstScreenController">
     <top>
         <MenuBar>
             <Menu text="Category">
