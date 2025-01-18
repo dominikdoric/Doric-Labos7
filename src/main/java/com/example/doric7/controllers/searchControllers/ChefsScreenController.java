@@ -1,6 +1,7 @@
-package com.example.doric7.controllers;
+package com.example.doric7.controllers.searchControllers;
 
-import com.example.doric7.app.screens.ChefsScreen;
+import com.example.doric7.app.screens.searchScreens.ChefsScreen;
+import com.example.doric7.controllers.addNewItemControllers.*;
 import com.example.doric7.models.Bonus;
 import com.example.doric7.models.Chef;
 import com.example.doric7.models.Contract;
@@ -11,17 +12,13 @@ import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import static com.example.doric7.app.Main.*;
@@ -78,14 +75,14 @@ public class ChefsScreenController {
     }
 
     @FXML
-    public void onCategoryMenuClick() {
+    public void onSearchCategoryClick() {
         FXMLLoader fxmlLoader =
                 new FXMLLoader(ChefsScreen.class.getResource("/com/example/doric7/categoryScreen.fxml"));
 
         try {
             Scene scene = new Scene(fxmlLoader.load(), 800, 800);
             stage.setScene(scene);
-            stage.setTitle("Category Screen");
+            stage.setTitle("Category Search Screen");
 
             CategoryScreenController controller = fxmlLoader.getController();
             controller.setStage(stage);
@@ -95,7 +92,24 @@ public class ChefsScreenController {
     }
 
     @FXML
-    public void onIngredientsMenuClick() {
+    public void onAddNewCategoryClick() {
+        FXMLLoader fxmlLoader =
+                new FXMLLoader(ChefsScreen.class.getResource("/com/example/doric7/addNewCategoryScreen.fxml"));
+
+        try {
+            Scene scene = new Scene(fxmlLoader.load(), 800,800);
+            stage.setScene(scene);
+            stage.setTitle("Add new category");
+
+            AddNewCategoryController controller = fxmlLoader.getController();
+            controller.setStage(stage);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @FXML
+    public void onSearchIngredientsClick() {
         FXMLLoader fxmlLoader =
                 new FXMLLoader(ChefsScreen.class.getResource("/com/example/doric7/ingredientsScreen.fxml"));
 
@@ -112,7 +126,24 @@ public class ChefsScreenController {
     }
 
     @FXML
-    public void onMealsMenuClick() {
+    public void onAddNewIngredientClick() {
+        FXMLLoader fxmlLoader =
+                new FXMLLoader(ChefsScreen.class.getResource("/com/example/doric/addNewIngredientsScreen.fxml"));
+
+        try {
+            Scene scene = new Scene(fxmlLoader.load(), 800, 800);
+            stage.setScene(scene);
+            stage.setTitle("Add new Ingredient");
+
+            AddNewIngredientController controller = fxmlLoader.getController();
+            controller.setStage(stage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void onSearchMealsClick() {
         FXMLLoader fxmlLoader =
                 new FXMLLoader(ChefsScreen.class.getResource("/com/example/doric7/mealsScreen.fxml"));
 
@@ -129,7 +160,24 @@ public class ChefsScreenController {
     }
 
     @FXML
-    public void onChefMenuClick() {
+    public void onAddNewMealClick() {
+        FXMLLoader fxmlLoader =
+                new FXMLLoader(ChefsScreen.class.getResource("/com/example/doric/addNewMealScreen.fxml"));
+
+        try {
+            Scene scene = new Scene(fxmlLoader.load(), 800, 800);
+            stage.setScene(scene);
+            stage.setTitle("Add new Ingredient");
+
+            AddNewMealController controller = fxmlLoader.getController();
+            controller.setStage(stage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void onSearchChefClick() {
         FXMLLoader fxmlLoader =
                 new FXMLLoader(ChefsScreen.class.getResource("/com/example/doric7/chefsScreen.fxml"));
 
@@ -146,7 +194,24 @@ public class ChefsScreenController {
     }
 
     @FXML
-    public void onWaitersMenuClick() {
+    public void onAddNewChefClick() {
+        FXMLLoader fxmlLoader =
+                new FXMLLoader(ChefsScreen.class.getResource("/com/example/doric/addNewChefScreen.fxml"));
+
+        try {
+            Scene scene = new Scene(fxmlLoader.load(), 800, 800);
+            stage.setScene(scene);
+            stage.setTitle("Add new Chef");
+
+            AddNewChefController controller = fxmlLoader.getController();
+            controller.setStage(stage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void onSearchWaitersClick() {
         FXMLLoader fxmlLoader =
                 new FXMLLoader(ChefsScreen.class.getResource("/com/example/doric7/waitersScreen.fxml"));
 
@@ -163,7 +228,24 @@ public class ChefsScreenController {
     }
 
     @FXML
-    public void onDeliverersMenuClick() {
+    public void onAddNewWaiterClick() {
+        FXMLLoader fxmlLoader =
+                new FXMLLoader(ChefsScreen.class.getResource("/com/example/doric/addNewWaitersScreen.fxml"));
+
+        try {
+            Scene scene = new Scene(fxmlLoader.load(), 800, 800);
+            stage.setScene(scene);
+            stage.setTitle("Add new Chef");
+
+            AddNewWaiterController controller = fxmlLoader.getController();
+            controller.setStage(stage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void onSearchDeliverersClick() {
         FXMLLoader fxmlLoader =
                 new FXMLLoader(ChefsScreen.class.getResource("/com/example/doric7/deliverersScreen.fxml"));
 
@@ -180,7 +262,24 @@ public class ChefsScreenController {
     }
 
     @FXML
-    public void onRestaurantsMenuClick() {
+    public void onAddNewDelivererClick() {
+        FXMLLoader fxmlLoader =
+                new FXMLLoader(ChefsScreen.class.getResource("/com/example/doric/addNewDelivererScreen.fxml"));
+
+        try {
+            Scene scene = new Scene(fxmlLoader.load(), 800, 800);
+            stage.setScene(scene);
+            stage.setTitle("Add new Deliverer");
+
+            AddNewDelivererScreenController controller = fxmlLoader.getController();
+            controller.setStage(stage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void onSearchRestaurantsClick() {
         FXMLLoader fxmlLoader =
                 new FXMLLoader(ChefsScreen.class.getResource("/com/example/doric7/restaurantsScreen.fxml"));
 
@@ -195,9 +294,25 @@ public class ChefsScreenController {
             exception.printStackTrace();
         }
     }
+    @FXML
+    public void onAddNewRestaurantClick() {
+        FXMLLoader fxmlLoader =
+                new FXMLLoader(ChefsScreen.class.getResource("/com/example/doric/addNewRestaurantScreen.fxml"));
+
+        try {
+            Scene scene = new Scene(fxmlLoader.load(), 800, 800);
+            stage.setScene(scene);
+            stage.setTitle("Add new Deliverer");
+
+            AddNewDelivererScreenController controller = fxmlLoader.getController();
+            controller.setStage(stage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     @FXML
-    public void onOrdersMenuClick() {
+    public void onSearchOrdersClick() {
         FXMLLoader fxmlLoader =
                 new FXMLLoader(ChefsScreen.class.getResource("/com/example/doric7/ordersScreen.fxml"));
 
@@ -214,7 +329,24 @@ public class ChefsScreenController {
     }
 
     @FXML
-    public void onContractsMenuClick() {
+    public void onAddNewOrderClick() {
+        FXMLLoader fxmlLoader =
+                new FXMLLoader(ChefsScreen.class.getResource("/com/example/doric/addNewOrderScreen.fxml"));
+
+        try {
+            Scene scene = new Scene(fxmlLoader.load(), 800, 800);
+            stage.setScene(scene);
+            stage.setTitle("Add new Chef");
+
+            AddNewOrderController controller = fxmlLoader.getController();
+            controller.setStage(stage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void onSearchContractsClick() {
         FXMLLoader fxmlLoader =
                 new FXMLLoader(ChefsScreen.class.getResource("/com/example/doric7/contractsScreen.fxml"));
 
@@ -227,6 +359,23 @@ public class ChefsScreenController {
             controller.setStage(stage);
         } catch (IOException exception) {
             exception.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void onAddNewContractsClick() {
+        FXMLLoader fxmlLoader =
+                new FXMLLoader(ChefsScreen.class.getResource("/com/example/doric/addNewContractsScreen.fxml"));
+
+        try {
+            Scene scene = new Scene(fxmlLoader.load(), 800, 800);
+            stage.setScene(scene);
+            stage.setTitle("Add new Chef");
+
+            AddNewContractController controller = fxmlLoader.getController();
+            controller.setStage(stage);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

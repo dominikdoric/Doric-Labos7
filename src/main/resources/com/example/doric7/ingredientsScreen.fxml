@@ -5,35 +5,44 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.HBox?>
-<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.doric7.controllers.IngredientScreenController">
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.doric7.controllers.searchControllers.IngredientScreenController">
     <top>
         <MenuBar>
             <Menu text="Category">
                 <MenuItem text="Search" onAction="#onCategoryMenuClick"/>
+                <MenuItem text="Add new category" onAction="#onCategoryMenuClick"/>
             </Menu>
             <Menu text="Ingredients">
                 <MenuItem text="Search" onAction="#onIngredientsMenuClick"/>
+                <MenuItem text="Add new ingredient" onAction="#onIngredientsMenuClick"/>
             </Menu>
             <Menu text="Meals">
                 <MenuItem text="Search" onAction="#onMealsMenuClick"/>
+                <MenuItem text="Add new meal" onAction="#onMealsMenuClick"/>
             </Menu>
             <Menu text="Chefs">
                 <MenuItem text="Search" onAction="#onChefMenuClick"/>
+                <MenuItem text="Add new chef" onAction="#onChefMenuClick"/>
             </Menu>
             <Menu text="Waiters">
                 <MenuItem text="Search" onAction="#onWaitersMenuClick"/>
+                <MenuItem text="Add new waiter" onAction="#onWaitersMenuClick"/>
             </Menu>
             <Menu text="Deliverers">
                 <MenuItem text="Search" onAction="#onDeliverersMenuClick"/>
+                <MenuItem text="Add new deliverer" onAction="#onDeliverersMenuClick"/>
             </Menu>
             <Menu text="Restaurants">
                 <MenuItem text="Search" onAction="#onRestaurantsMenuClick"/>
+                <MenuItem text="Add new restaurant" onAction="#onRestaurantsMenuClick"/>
             </Menu>
             <Menu text="Orders">
                 <MenuItem text="Search" onAction="#onOrdersMenuClick"/>
+                <MenuItem text="Add new order" onAction="#onOrdersMenuClick"/>
             </Menu>
             <Menu text="Contracts">
                 <MenuItem text="Search" onAction="#onContractsMenuClick"/>
+                <MenuItem text="Add new contract" onAction="#onContractsMenuClick"/>
             </Menu>
         </MenuBar>
     </top>

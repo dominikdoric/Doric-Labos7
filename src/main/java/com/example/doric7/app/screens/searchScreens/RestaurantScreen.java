@@ -1,6 +1,6 @@
-package com.example.doric7.app.screens;
+package com.example.doric7.app.screens.searchScreens;
 
-import com.example.doric7.controllers.RestaurantScreenController;
+import com.example.doric7.controllers.searchControllers.RestaurantScreenController;
 import com.example.doric7.models.Restaurant;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

@@ -18,3 +18,13 @@ Krumipiri
 2
 123.0
 Dobije se sadnjom
+5
+Ingredient name
+2
+Ingredient calories
+Ingredient preparation method
+6
+Ingredient name
+2
+200
+Ingredient preparation method

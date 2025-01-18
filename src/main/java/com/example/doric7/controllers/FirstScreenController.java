@@ -1,6 +1,10 @@
 package com.example.doric7.controllers;
 
 import com.example.doric7.app.FirstScreen;
+import com.example.doric7.app.screens.addNewItemScreens.AddNewIngredientScreen;
+import com.example.doric7.controllers.addNewItemControllers.AddNewCategoryController;
+import com.example.doric7.controllers.addNewItemControllers.AddNewIngredientController;
+import com.example.doric7.controllers.searchControllers.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -32,9 +36,26 @@ public class FirstScreenController {
         try {
             Scene scene = new Scene(fxmlLoader.load(), 800, 800);
             stage.setScene(scene);
-            stage.setTitle("Category Screen!");
+            stage.setTitle("Category Search Screen!");
 
             CategoryScreenController controller = fxmlLoader.getController();
+            controller.setStage(stage);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @FXML
+    public void onAddNewCategoryClick() {
+        FXMLLoader fxmlLoader =
+                new FXMLLoader(FirstScreen.class.getResource("/com/example/doric7/addNewCategoryScreen.fxml"));
+
+        try {
+            Scene scene = new Scene(fxmlLoader.load(), 800, 800);
+            stage.setScene(scene);
+            stage.setTitle("Category Search Screen!");
+
+            AddNewCategoryController controller = fxmlLoader.getController();
             controller.setStage(stage);
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -55,6 +76,23 @@ public class FirstScreenController {
             controller.setStage(stage);
         } catch (IOException exception) {
             exception.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void onAddNewIngredientClick() {
+        FXMLLoader fxmlLoader =
+                new FXMLLoader(FirstScreen.class.getResource("/com/example/doric7/addNewIngredientScreen.fxml"));
+
+        try {
+            Scene scene = new Scene(fxmlLoader.load(), 800, 800);
+            stage.setScene(scene);
+            stage.setTitle("Category Search Screen!");
+
+            AddNewIngredientController controller = fxmlLoader.getController();
+            controller.setStage(stage);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 

@@ -1,6 +1,6 @@
-package com.example.doric7.app.screens;
+package com.example.doric7.app.screens.searchScreens;
 
-import com.example.doric7.controllers.CategoryScreenController;
+import com.example.doric7.controllers.searchControllers.CategoryScreenController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -13,7 +13,7 @@ public class CategoryScreen extends Application {
         FXMLLoader fxmlLoader =
                 new FXMLLoader(CategoryScreen.class.getResource("/com/example/doric7/categoryScreen.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1000, 800);
-        stage.setTitle("Category Screen!");
+        stage.setTitle("Category Search Screen!");
         stage.setScene(scene);
         CategoryScreenController categoryScreenController = fxmlLoader.getController();
         categoryScreenController.setStage(stage);
