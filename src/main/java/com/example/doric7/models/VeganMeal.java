@@ -15,9 +15,10 @@ public final class VeganMeal extends Meal implements Vegan, Serializable {
                      Category category,
                      List<Ingredient> ingredients,
                      BigDecimal price,
+                     String origin,
                      int numberOfSalads
     ) {
-        super(id, name, category, ingredients, price);
+        super(id, name, category, ingredients, price, origin);
         this.numberOfSalads = numberOfSalads;
     }
 

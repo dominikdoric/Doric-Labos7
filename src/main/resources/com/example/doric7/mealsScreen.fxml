@@ -61,6 +61,7 @@
                     <TableColumn text="Category" fx:id="categoryColumn" prefWidth="150"/>
                     <TableColumn text="Ingredients" fx:id="ingredientsColumn" prefWidth="150"/>
                     <TableColumn text="Price" fx:id="priceColumn" prefWidth="150"/>
+                    <TableColumn text="Origin" fx:id="originColumn" prefWidth="150"/>
                 </columns>
             </TableView>
         </VBox>

@@ -3,13 +3,16 @@ Tjestenina s vrhnjem za kuhanje
 1
 1,3
 12.0
+Porijeklo je iz žitarica
 2
 Brancin sa krumpirima
 2
 2,4
 16.0
+Porijeklo je iz mora
 3
 Ćevapi u lepinji
 3
 3
 12.0
+Porijeklo je životinjsko

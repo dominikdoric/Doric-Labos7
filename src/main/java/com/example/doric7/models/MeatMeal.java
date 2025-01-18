@@ -15,8 +15,9 @@ public final class MeatMeal extends Meal implements Meat, Serializable {
                     Category category,
                     List<Ingredient> ingredients,
                     BigDecimal price,
+                    String origin,
                     String freezingMethod) {
-        super(id, name, category, ingredients, price);
+        super(id, name, category, ingredients, price, origin);
         this.freezingMethod = freezingMethod;
     }
 

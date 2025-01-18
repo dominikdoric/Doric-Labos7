@@ -241,6 +241,7 @@ public class Main {
      * @param categories  Categories field with default size to iterate through it.
      * @param scanner     Object which allows users to insert values through console.
      */
+    /*
     private static void insertMeals(Set<Meal> meals,
                                     Set<Ingredient> ingredients,
                                     Set<Category> categories,
@@ -304,6 +305,7 @@ public class Main {
             meals.add(new Meal((long) i, mealName, choosenCategory, chosenIngredients, mealPrice));
         }
     }
+     */
 
     /**
      * Function which contains logic for inserting and storing details about vegan meals
@@ -314,6 +316,7 @@ public class Main {
      * @param categories  All categories which user has already inserted.
      * @param ingredients All ingredients which user has already inserted.
      */
+    /*
     private static void insertVeganMeals(Scanner scanner,
                                          Set<VeganMeal> veganMeals,
                                          Set<Category> categories,
@@ -363,6 +366,8 @@ public class Main {
         }
     }
 
+     */
+
     /**
      * Function which contains logic for inserting and storing details about vegetarian meals
      * which user inserted.
@@ -372,6 +377,7 @@ public class Main {
      * @param categories      All categories which user has already inserted.
      * @param ingredients     All ingredients which user has already inserted.
      */
+    /*
     private static void insertVegetarianMeals(Scanner scanner,
                                               Set<VegetarianMeal> vegetarianMeals,
                                               Set<Category> categories,
@@ -420,6 +426,8 @@ public class Main {
         }
     }
 
+     */
+
     /**
      * Function which contains logic for inserting and storing details about meat meals
      * which user inserted.
@@ -429,6 +437,7 @@ public class Main {
      * @param categories  All categories which user has already inserted.
      * @param ingredients All ingredients which user has already inserted.
      */
+    /*
     private static void insertMeatMeals(Scanner scanner,
                                         Set<MeatMeal> meatMeals,
                                         Set<Category> categories,
@@ -475,6 +484,8 @@ public class Main {
             meatMeals.add(new MeatMeal((i + 1L), meatMealName, choosenCategory, chosenIngredients, mealPrice, freezingMethod));
         }
     }
+
+     */
 
     /**
      * Function which contains logic for asking user to insert which chefs will be available
@@ -1705,8 +1716,9 @@ public class Main {
                         .toList();
 
                 BigDecimal price = new BigDecimal(reader.readLine().trim());
+                String origin = reader.readLine().trim();
 
-                Meal meal = new Meal(id, name, category, mealIngredients, price);
+                Meal meal = new Meal(id, name, category, mealIngredients, price, origin);
                 meals.add(meal);
             }
         } catch (IOException exception) {

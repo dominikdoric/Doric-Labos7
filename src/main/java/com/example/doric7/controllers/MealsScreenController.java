@@ -37,6 +37,8 @@ public class MealsScreenController {
     private TableColumn<Meal, String> ingredientsColumn;
     @FXML
     private TableColumn<Meal, BigDecimal> priceColumn;
+    @FXML
+    private TableColumn<Meal, String> originColumn;
 
     private FilteredList<Meal> filteredMeals;
     private Stage stage;
@@ -49,6 +51,7 @@ public class MealsScreenController {
     private void initialize() {
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
+        originColumn.setCellValueFactory(new PropertyValueFactory<>("origin"));
         categoryColumn.setCellValueFactory(data ->
                 new SimpleObjectProperty<>(data.getValue().getCategory().getName())
         );
@@ -71,7 +74,7 @@ public class MealsScreenController {
     private void onSearchButtonClick() {
         String searchQuery = mealsName.getText().toLowerCase();
         filteredMeals.setPredicate(meals ->
-                meals.getName().toLowerCase().contains(searchQuery)
+                meals.getOrigin().toLowerCase().contains(searchQuery)
         );
 
         mealTableView.getItems().setAll(filteredMeals);

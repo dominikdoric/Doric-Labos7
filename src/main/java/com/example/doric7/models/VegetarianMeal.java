@@ -15,9 +15,10 @@ public final class VegetarianMeal extends Meal implements Vegetarian, Serializab
                           Category category,
                           List<Ingredient> ingredients,
                           BigDecimal price,
+                          String origin,
                           boolean containsEggs
     ) {
-        super(id, name, category, ingredients, price);
+        super(id, name, category, ingredients, price, origin);
         this.containsEggs = containsEggs;
     }
 

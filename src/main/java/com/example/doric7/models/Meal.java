@@ -12,13 +12,15 @@ public class Meal extends Entity implements Serializable {
     private Category category;
     private List<Ingredient> ingredients;
     private BigDecimal price;
+    private String origin;
 
-    public Meal(Long id, String name, Category category, List<Ingredient> ingredients, BigDecimal price) {
+    public Meal(Long id, String name, Category category, List<Ingredient> ingredients, BigDecimal price, String origin) {
         super(id);
         this.name = name;
         this.category = category;
         this.ingredients = ingredients;
         this.price = price;
+        this.origin = origin;
     }
 
     public String getName() {
@@ -61,5 +63,13 @@ public class Meal extends Entity implements Serializable {
     @Override
     public boolean equals(Object obj) {
         return super.equals(obj);
+    }
+
+    public String getOrigin() {
+        return origin;
+    }
+
+    public void setOrigin(String origin) {
+        this.origin = origin;
     }
 }
